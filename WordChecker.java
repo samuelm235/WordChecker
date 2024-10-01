@@ -9,8 +9,21 @@ public class WordChecker {
      * Precondition: wordList contains at least two elements.
      * Postcondition: wordList is unchanged.
      */
-    public boolean isWordChain() {
-        /* to be implemented in part (a) */ }
+    public boolean isWordChain() 
+    {
+        private String previous_word;
+        for(int i = 1; i < wordList.size(); i ++)
+            {
+                previous_word = wordList.get(i - 1);
+                if(!wordList.get(i).contains(previous_word)
+                   {
+                    return false;
+                   }
+            }
+        return true;
+            
+            
+    }
 
     /**
      * Returns an ArrayList<String> based on strings from wordList that start
