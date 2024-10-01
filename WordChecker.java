@@ -1,6 +1,6 @@
 public class WordChecker {
     /** Initialized in the constructor and contains no null elements */
-    private ArrayList<String> wordList;
+    private ArrayList<String> wordList = ["at", "cat", "catch", "catchat", "catchatat"];
 
     /**
      * Returns true if each element of wordList (except the first) contains the
@@ -24,7 +24,7 @@ public class WordChecker {
             
             
     }
-
+System.out.print(isWordChain);
     /**
      * Returns an ArrayList<String> based on strings from wordList that start
      * with target, as described in part (b). Each element of the returned ArrayList
