@@ -1,6 +1,23 @@
+import java.util.ArrayList;
+
 public class WordChecker {
     /** Initialized in the constructor and contains no null elements */
-    private ArrayList<String> wordList = ["at", "cat", "catch", "catchat", "catchatat"];
+    private ArrayList<String> wordList;
+    private String previous_word;
+    public WordChecker()
+    {
+        wordList = new ArrayList<String>();
+    }
+
+    public void add(String[] words)
+    {
+        for(String word : words) wordList.add(word);
+    }
+
+    public ArrayList<String> getWordList()
+    {
+        return wordList;
+    }
 
     /**
      * Returns true if each element of wordList (except the first) contains the
@@ -11,11 +28,10 @@ public class WordChecker {
      */
     public boolean isWordChain() 
     {
-        private String previous_word;
         for(int i = 1; i < wordList.size(); i ++)
             {
                 previous_word = wordList.get(i - 1);
-                if(!wordList.get(i).contains(previous_word)
+                if(!wordList.get(i).contains(previous_word))
                    {
                     return false;
                    }
@@ -24,7 +40,7 @@ public class WordChecker {
             
             
     }
-System.out.print(isWordChain);
+
     /**
      * Returns an ArrayList<String> based on strings from wordList that start
      * with target, as described in part (b). Each element of the returned ArrayList
