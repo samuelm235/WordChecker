@@ -2,11 +2,12 @@ public class Main
 {
     public static void main(String[] args)
     {
-        WordChecker test = new WordChecker();
-        String[] words = {"at", "cat", "catch", "catchat", "catchatat"};
-        test.add(words);
-        System.out.println(test.getWordList());
-        System.out.println(test.isWordChain());
+        ArrayList<String> words = new ArrayList<String>();
+        words.add("an");
+        words.add("band");
+        words.add("band");
+        words.add("abandon");
+        System.out.println(words);
     }
 }
 
