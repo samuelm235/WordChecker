@@ -8,6 +8,11 @@ public class WordChecker {
     {
         wordList = new ArrayList<String>();
     }
+    public WordChecker(ArrayList<String> list)
+    {
+        wordList = list;
+    }
+
 
     public void add(String[] words)
     {
